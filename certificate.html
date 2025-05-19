@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate - QuizX</title>
+  <link rel="stylesheet" href="certificate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #002f47;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  color: #ffa500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar nav a,
+.logout {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.sidebar nav a i,
+.logout i {
+  margin-right: 8px;
+}
+
+.sidebar nav a:hover,
+.logout:hover,
+.sidebar nav a.active {
+  background-color: white;
+  color: #002f47;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.certificate-card {
+  position: relative;
+  border: 2px solid #002f47;
+  padding: 30px;
+  border-radius: 6px;
+  background-color: white;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.cert-title {
+  text-align: center;
+  color: #ffa500;
+  font-size: 28px;
+}
+
+.cert-heading {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.cert-heading i {
+  color: gold;
+  margin-right: 5px;
+}
+
+.certificate-card h4 {
+  margin: 10px 0;
+}
+
+.cert-footer {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.blocks {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  left: 10px;
+}
+
+.blocks.top-right {
+  top: 10px;
+  right: 10px;
+  left: auto;
+  bottom: auto;
+}
+
+.orange-block,
+.blue-block,
+.yellow-block,
+.dark-block {
+  width: 20px;
+  height: 20px;
+}
+
+.orange-block {
+  background-color: orange;
+}
+
+.blue-block {
+  background-color: #008cba;
+  margin-left: 5px;
+}
+
+.yellow-block {
+  background-color: #ffc107;
+}
+
+.dark-block {
+  background-color: #002f47;
+  margin-left: 5px;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ff9900;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2 class="logo">QuizX</h2>
+      <nav>
+        <a href="#"> <i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="#"> <i class="fas fa-check-circle"></i> Exam</a>
+        <a href="#" class="active"> <i class="fas fa-certificate"></i> Certificate</a>
+      </nav>
+      <a href="#" class="logout"><i class="fas fa-cog"></i> Logout</a>
+    </aside>
+
+    <main class="main-content">
+      <h1>Welcome To The JS Workshop Platform NAME! 🎉</h1>
+      <p class="description">
+        Congratulations! You've officially passed the exam and earned your certificate! Your dedication and hard work have paid off — this is a big milestone in your web development journey. Keep pushing forward, the tech world needs talented minds like yours!
+      </p>
+
+      <div class="certificate-card">
+        <h2 class="cert-title">QuizX</h2>
+        <h3 class="cert-heading"><i class="fas fa-trophy"></i> Certificate Of Completion</h3>
+        <p>This Certifies That</p>
+        <h4>[Full Name]</h4>
+        <p>
+          Has Successfully Completed The Full-Stack JavaScript Workshop Exam And Demonstrated Proficiency In Both Frontend And Backend Development, Including Working With Modern Development Tools And Cloud Technologies.
+        </p>
+        <p class="cert-footer">
+          Date: [Date Of Completion] <br>
+          Issued By: JavaScript Workshop Team
+        </p>
+        <div class="blocks">
+          <div class="orange-block"></div>
+          <div class="blue-block"></div>
+        </div>
+        <div class="blocks top-right">
+          <div class="yellow-block"></div>
+          <div class="dark-block"></div>
+        </div>
+      </div>
+
+      <button class="download-btn">Download My Certificate</button>
+    </main>
+  </div>
+</body>
+</html>

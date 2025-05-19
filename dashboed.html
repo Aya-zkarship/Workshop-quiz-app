@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #0c2d48;
+  color: white;
+  width: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #ffcc00;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: #ffcc00;
+}
+
+.logout {
+  margin-top: auto;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  max-width: 60%;
+}
+
+header h1 {
+  margin: 10px 0;
+}
+
+header p {
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.skills {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.skills li {
+  margin-bottom: 5px;
+}
+
+.start-btn {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background-color: #f4b400;
+}
+
+.right-box {
+  width: 35%;
+}
+
+.question-box {
+  background-color: #ffa726;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.question-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.image {
+  max-width: 120px;
+  margin-top: 10px;
+}
+
+.exam-statistics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stat {
+  flex: 1;
+  min-width: 120px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.stat.yellow {
+  background-color: #fbc02d;
+  color: #000;
+}
+
+.stat.blue {
+  background-color: #0288d1;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1 class="logo">QuizX</h1>
+      <nav>
+        <ul>
+          <a href="#"> <i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="#"> <i class="fas fa-check-circle"></i> Exam</a>
+        <a href="#" class="active"> <i class="fas fa-certificate"></i> Certificate</a>
+        </ul>
+      </nav>
+      <a href="#" class="logout">⚙️ Logout</a>
+      
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h3>Welcome To The JS Workshop Platform NAME! 👋</h3>
+        <h1>Welcome To The JS Workshop Platform.</h1>
+        <p>
+          You're just one step away from proving your skills! This quiz is your chance to show what you’ve learned in JavaScript, Git, Node.js, Express, and databases. Stay confident, trust your knowledge, and go for it — you’ve got this!
+        </p>
+
+        <h4>Technologies & Skills Learned:</h4>
+        <ul class="skills">
+          <li>HTML, CSS, JavaScript (Web Fundamentals)</li>
+          <li>Git & GitHub (Version Control)</li>
+          <li>Node.js (Back-end JavaScript Runtime)</li>
+          <li>Express.js (Web Framework for Node.js)</li>
+          <li>Database Management (e.g., MongoDB or PostgreSQL)</li>
+          <li>RESTful API integration</li>
+          <li>Basic deployment and testing principles</li>
+        </ul>
+
+        <button class="start-btn">Start The Exam</button>
+      </header>
+
+      <section class="right-box">
+        <div class="question-box">
+          <h2>How Full Is Your Stack?<br>Let's Find Out.</h2>
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="dev" class="image">
+        </div>
+
+        <div class="exam-statistics">
+          <div class="stat yellow">
+            <strong>60%</strong><br>Success Ratio
+          </div>
+          <div class="stat blue">
+            <strong>20</strong><br>Student Finished
+          </div>
+          <div class="stat blue">
+            <strong>30</strong><br>Total Student
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

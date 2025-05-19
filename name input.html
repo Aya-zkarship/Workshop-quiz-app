@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuizX - Name Input</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #134b9f, #fae3d9);
+    }
+
+    .container {
+      display: flex;
+      width: 80%;
+      height: 80%;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #f8f9fa;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .left h1 {
+      font-size: 48px;
+      color: #1a1d7b;
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      font-size: 16px;
+      color: #000000;
+      line-height: 1.5;
+    }
+
+    .right {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .form-container p {
+      margin-bottom: 20px;
+      color: #002d45;
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a1d7b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #121684;
+    }
+
+    button:nth-child(3) {
+      background-color: rgb(33, 24, 134);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>QuizX</h1>
+      <p>This QuizX web application allows users to test their understanding of essential web development concepts through a series of interactive quizzes. The topics covered include JavaScript fundamentals, Git, Node.js, Express.js, and database management.</p>
+    </div>
+    <div class="right">
+      <div class="form-container">
+        <p>This name will appear on your certificate, so please make sure it’s correct. You won’t be able to change it later.</p>
+        <input type="text" placeholder="User name" required>
+        <button onclick="goNext()">Next</button>
+        <button onclick="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goNext() {
+      alert("Going to the quiz...");
+    }
+
+    function goBack() {
+      window.location.href = "login.html"; // Change to your first page filename
+    }
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizX - Exam</title>
+  <link rel="stylesheet" href="quiz.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fb;
+  height: 100vh;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #042c47;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  color: #ffcc00;
+  margin-bottom: 40px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background-color: #1e4a6e;
+}
+
+.logout {
+  color: white;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 14px;
+  color: #333;
+  max-width: 600px;
+}
+
+.question-box {
+  background-color: #013a63;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.code-block {
+  background-color: #001e36;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-family: monospace;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option {
+  background-color: #014f86;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.option:hover {
+  background-color: #036aa1;
+}
+
+.option input[type="radio"] {
+  accent-color: white;
+}
+
+.option.selected {
+  background-color: #f57c00;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.next-btn {
+  background-color: #ffb300;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.next-btn:hover {
+  background-color: #ffa000;
+}
+
+.exit-btn {
+  background-color: #d6ecfa;
+  color: #042c47;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1 class="logo">QuizX</h1>
+      <nav>
+        <ul>
+          <a href="#"> <i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="#"> <i class="fas fa-check-circle"></i> Exam</a>
+        <a href="#" class="active"> <i class="fas fa-certificate"></i> Certificate</a>
+        </ul>
+      </nav>
+      <a href="#" class="logout">⚙️ Logout</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="header">
+        <h3>Welcome To The JS Workshop Platform NAME! 👋</h3>
+        <p>You’re almost there! This quiz is your opportunity to put all your hard work and learning into action. Stay focused, trust in your skills, and give it your best shot — you’ve got this!</p>
+      </div>
+
+      <div class="question-box">
+        <div class="question-header">
+          <span>What Will The Following JavaScript Code Output?</span>
+          <span class="question-number">5/15</span>
+        </div>
+
+        <div class="code-block">
+          <code>console.log(typeof null);</code>
+        </div>
+
+        <div class="answers">
+          <label class="option"><input type="radio" name="answer" /> Null</label>
+          <label class="option selected"><input type="radio" name="answer" checked /> Object</label>
+          <label class="option"><input type="radio" name="answer" /> Undefined</label>
+          <label class="option"><input type="radio" name="answer" /> Number</label>
+        </div>
+
+        <div class="buttons">
+          <button class="next-btn">Next</button>
+          <button class="exit-btn">Exit Exam</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
